@@ -7,7 +7,10 @@ var loadData = function(filename) {
 }
 
 var parseData = function (file) {
-	var fileArr = [];
-	fileArr = file.split('\n');
+	var fileArr, i;
+	fileArr = file.split('\n'); // Look up regular expressions (regex) for javascipt
+	for (i = 0; i < fileArr.length; i += 1) {
+		fileArr[i] = fileArr[i].split('\t');
+	}
 	console.log(fileArr);
 }
